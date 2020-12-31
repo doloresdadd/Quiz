@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+@import "score";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $blue-bell;
+  font-family: "Love Ya Like A Sister", cursive;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 3rem;
+}
+
+h1 {
+  padding-bottom: 2rem;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+.quiz-container {
+  display: grid;
+  grid-template-rows: 15% 30% 48% 7%;
+  position: relative;
+  background-color: $aero;
+  border-radius: 10px;
+  padding: 2rem;
+  min-height: 80vh;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+
+  .image {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.center {
+  display: flex;
+}
+
+.radio-group {
+  margin: auto;
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.radio-group-label {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.radio-label {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+
+  @media (max-width: 48em) {
+    display: block;
+    margin: 10px 0;
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .inner-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom: $border-bottom-input;
+      width: 30px;
+      transition: $border-bottom-transition;
+    }
+  }
+
+  input:focus ~ .inner-label {
+    &:before {
+      border-bottom: $border-bottom-input-focus;
+    }
+  }
+
+  input:checked ~ .inner-label {
+    &:after {
+      content: "\2713";
+      color: black;
+      position: absolute;
+      font-size: 12px;
+      left: 12px;
+      top: 1px;
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: $blue-bell;
+
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}

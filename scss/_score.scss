@@ -1,0 +1,15 @@
+@import "variables";
+
+.result {
+  display: flex;
+  grid-template-rows: 15% 30% 48% 7%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: $aero;
+  border-radius: 10px;
+  padding: 2rem;
+  min-height: 80vh;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}

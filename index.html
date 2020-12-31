@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    /> -->
+
+    <title>The Quiz</title>
+  </head>
+  <body>
+    <h1>The Quiz</h1>
+
+    <div class="quiz-container" id="quiz-container">
+      <div class="question">
+        <h5 id="question">
+          What was the name of the school where the Doctor was working
+          undercover in 2006’s School Reunion?
+        </h5>
+      </div>
+      <div class="image" id="image">
+        <img
+          src="http://images4.fanpop.com/image/photos/17700000/2x03-School-Reunion-doctor-who-17746475-1600-900.jpg"
+          alt="quiz image"
+        />
+      </div>
+      <div class="center">
+        <div class="radio-group" id="answerOptions">
+          <!-- <label class="radio-label">
+            <input name="answers" type="radio" id="answer1" />
+            <span class="inner-label" id="option1">Coal Hill</span>
+          </label>
+          <label class="radio-label">
+            <input name="answers" type="radio" id="answer2" />
+            <span class="inner-label" id="option2">Deffrey Vale</span>
+          </label>
+          <label class="radio-label">
+            <input name="answers" type="radio" id="answer3" />
+            <span class="inner-label" id="option3">Golden Point</span>
+          </label>
+          <label class="radio-label">
+            <input name="answers" type="radio" id="answer4" />
+            <span class="inner-label" id="option4">Dolby Grammar</span>
+          </label> -->
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn" id="submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="result hide" id="result-container">
+      <h5 id="result">You scored <span id="score"></span>%</h5>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
