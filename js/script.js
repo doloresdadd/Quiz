@@ -118,4 +118,27 @@ function finalscore() {
   quizContainer.classList.add("hide");
   resultContainer.classList.remove("hide");
   score.innerText = percentageScore.toFixed(2);
+
+  // Create pie chart for results
+  google.charts.load("current", { packages: ["corechart"] });
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ["Results", "Your Score"],
+      ["Correct", percentageScore],
+      ["Incorrect", 100 - percentageScore],
+    ]);
+
+    var options = {
+      // title: "Your Score",
+      is3D: true,
+      backgroundColor: "#8fb8de",
+      colors: ["#9b5094", "#6a605c"],
+    };
+
+    var chart = new google.visualization.PieChart(
+      document.getElementById("piechart_3d")
+    );
+    chart.draw(data, options);
+  }
 }

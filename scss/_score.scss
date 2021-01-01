@@ -1,15 +1,30 @@
 @import "variables";
 
 .result {
-  display: flex;
-  grid-template-rows: 15% 30% 48% 7%;
+  display: grid;
+  grid-template-rows: 25% 50% 25;
   position: relative;
   justify-content: center;
   align-items: center;
+
   background-color: $aero;
   border-radius: 10px;
   padding: 2rem;
   min-height: 80vh;
-
+  min-width: 80vw;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+
+  h5 {
+    text-align: center;
+    width: 80vw;
+  }
+
+  .btn {
+    width: 80vw;
+  }
+
+  #piechart_3d {
+    align-self: center;
+    justify-self: center;
+  }
 }
